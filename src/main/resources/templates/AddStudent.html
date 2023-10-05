@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/save}" method="post">
+		<div>
+			Name : <input type="text" name="sname" >
+			Location : <input type="text" name="slocation">
+			Age : <input type="number" name="sage">
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+</body>
+</html>

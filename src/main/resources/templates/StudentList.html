@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	table,th,td{
+		border: 2px solid black;
+		border-collapse: collapse;
+	}
+</style>
+</head>
+<body>
+	<h1>LIST PAGE</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>LOCATION</th>
+				<th>AGE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="s:${student}">
+				<td th:text="${s.sid}"></td>
+				<td th:text="${s.sname}"></td>
+				<td th:text="${s.slocation}"></td>
+				<td th:text="${s.sage}"></td>
+				<td>
+					<a th:href="@{/edit/{sid} (sid=${s.sid})}">Edit</a>
+				</td>
+				<td>
+					<a th:href="@{/delete/{sid} (sid=${s.sid})}">Delete</a>
+				</td>
+			</tr>			
+		</tbody>
+	</table>
+</body>
+</html>

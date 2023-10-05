@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/update}" method="post" th:object="${entity}">
+		<div>
+			<input type="hidden" name="sid" th:value="${entity.sid}">
+			Name : <input type="text" name="sname" th:value="${entity.sname}">
+			Location : <input type="text" name="slocation" th:value="${entity.slocation}">
+			Age : <input type="number" name="sage" th:value="${entity.sage}">
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+</body>
+</html>
