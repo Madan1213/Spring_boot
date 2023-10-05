@@ -18,6 +18,7 @@ import com.spring.crud.service.StudentService;
 @Controller
 public class StudentController 
 {
+	//int a = 10;
 	@Autowired
 	StudentService service;
 	
