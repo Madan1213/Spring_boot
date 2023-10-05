@@ -18,7 +18,7 @@ import com.spring.crud.service.StudentService;
 @Controller
 public class StudentController 
 {
-	String a ="ABCD";
+	//String a ="ABCD";
 	@Autowired
 	StudentService service;
 	
